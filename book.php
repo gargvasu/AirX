@@ -85,10 +85,10 @@
 	                      <input type="text" class="form-control" name="aname'.$ctr.'" id="inputEmail" placeholder="Name" required>
 	                    </div>
 	                    <div class="col-lg-4">
-	                      <input type="text" class="form-control" pattern="[0-9]{12}" name="aadhar'.$ctr.'" id="inputEmail" placeholder="Aadhar">
+	                      <input type="text" class="form-control" pattern="[0-9]{12}" name="aadhar'.$ctr.'" id="inputEmail" placeholder="Aadhar" required>
 	                    </div>
 						<div class="col-lg-2">
-	                      <input type="number" min="1"  class="form-control" name="aage'.$ctr.'" id="inputEmail" placeholder="Age">
+	                      <input type="number" min="1"  class="form-control" name="aage'.$ctr.'" id="inputEmail" placeholder="Age" required>
 	                    </div>
 	                    <div class="col-lg-2">
 	                      <select class="form-control" name="asex'.$ctr.'"  id="select" required>

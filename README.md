@@ -24,7 +24,8 @@ Notepad++
 ```
 ### Installing
 
-A step by step series of examples that tell you how to get the site running on your local server`
+A step by step series of examples that tell you how to get the site running on your local server
+
 ```
 1. Add the folder to your C:/wamp/www/ or C:xampp/htdocs/ directory
 ```
@@ -38,7 +39,11 @@ A step by step series of examples that tell you how to get the site running on y
 ```
 
 ```
-3. Go to localhost/AirX/
+4. Go to localhost/AirX/
+```
+
+```
+5. Add flights to the database using the insert_flight.sql
 ```
 
 ### Screenshots
@@ -68,3 +73,28 @@ Saved Debit/Credit Cards
 ## Live Demo
 
  [AirX](https://www.gargvasu.in/AirX)
+ 
+### Deployment
+
+A step by step series of examples that tell you how to get the site running on cPanel Linux Hosting
+
+```
+1. Upload your files to your linux hosting either using ftp or manual file upload
+```
+
+```
+2. Create a database with name AirX on phpmyadmin portal and import the structure using the airx.sql file. Add the database privileges to the database user for this database.
+```
+
+```
+3. Configure the database in AirX\core\database\connect.php. Also, configure the include path for all the files as /home/{user_name}/public_html/AirX/path
+```
+
+```
+4. Add flights to the database using the insert_flight.sql
+```
+
+```
+5. Set up AirX@your_domain_name.com email account
+```
+
