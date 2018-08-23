@@ -1,7 +1,17 @@
 # AirX
 AirX is an Online Flight Booking System developed as an assignment by One Direct Hiring.
-Airports \n
-Chennai MAA\nDelhi DEL\nKolkata CCU\nMumbai BOM\nBengaluru BLR\nHyderabad HYD\nKochi COK\nPune PNQ\nGoa GOI\nAmritsar ATQ\nChandigarh IXC\n
+Airports <BR />
+Chennai MAA <BR />
+Delhi DEL <BR />
+Kolkata CCU <BR />
+Mumbai BOM <BR />
+Bengaluru BLR <BR />
+Hyderabad HYD <BR />
+Kochi COK <BR />
+Pune PNQ <BR />
+Goa GOI <BR />
+Amritsar ATQ <BR />
+Chandigarh IXC <BR />
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
@@ -52,7 +62,7 @@ A step by step series of examples that tell you how to get the site running on y
 
  [AirX](https://www.gargvasu.in/AirX)
 
-Mail Account for account activation and password reset : AirX@gargvasu.in \n
+Mail Account for account activation and password reset : AirX@gargvasu.in <BR />
 Please check your spam folder also
  
 ### Deployment
