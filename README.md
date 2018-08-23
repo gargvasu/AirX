@@ -1,5 +1,5 @@
 # AirX
-AirX is an Online Flight Booking System developed as an assignment for One Direct Hiring.
+AirX is an Online Flight Booking System developed as an assignment by One Direct Hiring.
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
@@ -12,9 +12,15 @@ an Apache-MySQL-PHP environment local testing server
 WAMP
 XAMPP
 ```
-Web Browser
+
+a Web Browser
 ```
 Google Chrome
+```
+
+a Text Editor
+```
+Notepad++
 ```
 ### Installing
 
