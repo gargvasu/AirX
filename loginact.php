@@ -31,7 +31,7 @@
 				$_SESSION['u_id'] = $u_login;
 				header('Location: http://localhost:8383/AirX/index.php');
 				exit();
-			}
+			} // Account Validation
 		} 		
 	}
 	else {

@@ -1,6 +1,9 @@
 <?php 
   include $_SERVER["DOCUMENT_ROOT"].'AirX/core/init.php';
   include $_SERVER["DOCUMENT_ROOT"].'AirX/includes/overall/header.php';
+  if(isset($_GET['success']) === true && empty($_GET['success']) === true) {
+	  echo "<script>alert('Booking Successfull');</script>";
+  }
 ?>
       
       <legend>My Bookings</legend>

@@ -1,5 +1,7 @@
 # AirX
 AirX is an Online Flight Booking System developed as an assignment by One Direct Hiring.
+Airports \n
+Chennai MAA\nDelhi DEL\nKolkata CCU\nMumbai BOM\nBengaluru BLR\nHyderabad HYD\nKochi COK\nPune PNQ\nGoa GOI\nAmritsar ATQ\nChandigarh IXC\n
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
@@ -46,6 +48,37 @@ A step by step series of examples that tell you how to get the site running on y
 5. Add flights to the database using the insert_flight.sql
 ```
 
+# Live Demo
+
+ [AirX](https://www.gargvasu.in/AirX)
+
+Mail Account for account activation and password reset : AirX@gargvasu.in \n
+Please check your spam folder also
+ 
+### Deployment
+
+A step by step series of examples that tell you how to get the site running on cPanel Linux Hosting
+
+```
+1. Upload your files to your linux hosting either using ftp or manual file upload
+```
+
+```
+2. Create a database with name AirX on phpmyadmin portal and import the structure using the airx.sql file. Add the database privileges to the database user for this database.
+```
+
+```
+3. Configure the database in AirX\core\database\connect.php. Also, configure the include path for all the files as /home/{user_name}/public_html/AirX/path
+```
+
+```
+4. Add flights to the database using the insert_flight.sql
+```
+
+```
+5. Set up AirX@your_domain_name.com email account
+```
+
 ## Screenshots
 
 Search Page
@@ -80,37 +113,4 @@ Save Payment Details for fast and easy Payment process
 
 Saved Debit/Credit Cards
 ![image](https://gargvasu.in/AirX_images/6.png)
-
-
-
-# Live Demo
-
- [AirX](https://www.gargvasu.in/AirX)
-
-Mail Account for account activation and password reset : AirX@gargvasu.in 
-Please check your spam folder also
- 
-### Deployment
-
-A step by step series of examples that tell you how to get the site running on cPanel Linux Hosting
-
-```
-1. Upload your files to your linux hosting either using ftp or manual file upload
-```
-
-```
-2. Create a database with name AirX on phpmyadmin portal and import the structure using the airx.sql file. Add the database privileges to the database user for this database.
-```
-
-```
-3. Configure the database in AirX\core\database\connect.php. Also, configure the include path for all the files as /home/{user_name}/public_html/AirX/path
-```
-
-```
-4. Add flights to the database using the insert_flight.sql
-```
-
-```
-5. Set up AirX@your_domain_name.com email account
-```
 

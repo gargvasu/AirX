@@ -1,13 +1,13 @@
 <?php 
-  include $_SERVER["DOCUMENT_ROOT"].'AirX/core/init.php';
+  include $_SERVER["DOCUMENT_ROOT"].'AirX/core/init.php';	//Including necessary files 
   
-  include $_SERVER["DOCUMENT_ROOT"].'AirX/includes/overall/header.php';
+  include $_SERVER["DOCUMENT_ROOT"].'AirX/includes/overall/header.php';//Adding Header
 ?>
 
       <div class="row">
         <div class="col-lg-12">
           <div class="well bs-component">
-            <form class="form-horizontal" action="" method="GET">
+            <form class="form-horizontal" action="" method="GET"> <!--Search Form -->
               <center><legend>Search Flights</legend></center>
               <div class="form-group">
                 <div class="col-lg-6">
@@ -106,7 +106,11 @@
 				   <td><?php echo $row['departure_time']; ?></td>
                    <td><?php echo $row['arrival_time']; ?></td>
 				   <td><?php  if($row['f_stops']==0) {echo "Non Stop";}else{ echo "One Stop";} ?></td>
-                   <td><?php echo $row['e_seats_left']; ?></td>
+                   <td><?php $min= $row['f_airtime']+$row['f_stoptime'];
+								$hour = $min/60;
+								echo $hour." hours";
+				   ?></td>
+				   <td><?php echo $row['e_seats_left']; ?></td>
                    <td><?php echo $row['e_price']; ?></td></tr>
                    <?php } 
 				   else if($class==='Business') { ?> <tr>

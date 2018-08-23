@@ -1,11 +1,15 @@
 <?php
 
 
-	function activation($to, $subject, $body) {
+	function activation($to, $subject, $body) {   //Account activation mail function
 		mail($to, $subject, $body, 'From: AirX@gargvasu.in');
 	}
 	
-	function recovery_user_pass($to, $subject, $body) {
+	function booking_success($to, $subject, $body) {	//Booking Confirmation mail function
+		mail($to, $subject, $body, 'From: AirX@gargvasu.in');
+	}
+	
+	function recovery_user_pass($to, $subject, $body) { //Password Recovery mail function
 		mail($to, $subject, $body, 'From: AirX@gargvasu.in');
 	}
 

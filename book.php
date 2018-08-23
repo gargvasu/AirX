@@ -206,7 +206,8 @@
 		mysql_query("UPDATE `flight_search` SET `b_seats_left`='$left' WHERE `fno`='$f_no'");	
 		}
 		
-		header('Location: bookings.php');
+		booking_success($u_mailid,"Booking Successful PNR: ".$pnr,$u_data['u_fname'].' '.$u_data['u_lname'].", Your Booking is succesfull. The PNR generated for the booking is ".$pnr); //Booking Success Mail
+		header('Location: bookings.php?success'); // Redirect
 		
 		
 		
