@@ -29,7 +29,7 @@
           					     minDate: 0,
           					     dateFormat:"dd-mm-yy"
           					  });
-							  $("#departure_date").datepicker().datepicker("setDate", new Date());
+							  //$("#departure_date").datepicker().datepicker("setDate", new Date());
                       $("#return_date").datepicker({
           					     maxDate: 30,
           					     minDate: 1,

@@ -44,6 +44,26 @@ A step by step series of examples that tell you how to get the site running on y
 ### Screenshots
 
 ![image](https://gargvasu.in/AirX_images/1.png)
+Search Page
+
+![image](https://gargvasu.in/AirX_images/7.png)
+Flights cuurently in Database
+
+![image](https://gargvasu.in/AirX_images/2.png)
+Flight List Displayed
+
+![image](https://gargvasu.in/AirX_images/3.png)
+User Login Page
+
+![image](https://gargvasu.in/AirX_images/4.png)
+Passenger Detail to be entered here for booking
+
+![image](https://gargvasu.in/AirX_images/5.png)
+Save Payment Details for fast and easy Payment process
+
+![image](https://gargvasu.in/AirX_images/6.png)
+Saved Debit/Credit Cards
+
 
 ## Live Demo
 
