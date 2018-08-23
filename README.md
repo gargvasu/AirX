@@ -46,7 +46,7 @@ A step by step series of examples that tell you how to get the site running on y
 5. Add flights to the database using the insert_flight.sql
 ```
 
-### Screenshots
+## Screenshots
 
 Search Page
 ![image](https://gargvasu.in/AirX_images/1.png)
@@ -83,9 +83,12 @@ Saved Debit/Credit Cards
 
 
 
-## Live Demo
+# Live Demo
 
  [AirX](https://www.gargvasu.in/AirX)
+
+Mail Account for account activation and password reset : AirX@gargvasu.in 
+Please check your spam folder also
  
 ### Deployment
 
