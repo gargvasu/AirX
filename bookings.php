@@ -7,7 +7,7 @@
 
       <?php
         $uid=$u_data['u_id']; //Assigns logged in id to a variable
-        $query="SELECT * FROM `passenger_details` WHERE `u_id` = '$uid'"; //Sorts by date time
+        $query="SELECT * FROM `passenger_details` WHERE `u_id` = '$uid'"; 
         $result=mysql_query($query);
         if($result) {
         while($row=mysql_fetch_assoc($result))
@@ -32,10 +32,6 @@
             echo 'Passenger Sex: '.$row['p_sex'].'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.'<br>';
 			echo 'Passenger Aadhar: '.$row['p_aadhar'].'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.'<br>';
             echo 'Boarding Pass Type: '.$row['p_passtype'].'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.'<br><br>';
-			// $p_name=$row['p_name'];
-			// $p_age=$row['p_age'];
-			// $p_sex=$row['p_sex'];
-			// $p_aadhar=$row['p_aadhar'];
 			echo "<input type='hidden' value='".$row['p_name']."' id='p_name' name='p_name' />";
 			echo "<input type='hidden' value='".$row['p_age']."' id='p_age' name='p_age' />";
 			echo "<input type='hidden' value='".$row['p_sex']."' id='p_sex' name='p_sex' />";

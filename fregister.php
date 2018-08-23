@@ -38,9 +38,6 @@
 			if($_POST['u_password'] !== $_POST['u_password_again']) {
 				$errors[] = 'Your passwords do no match!';
 			}
-			/* if(!preg_match('/@gmail\.com$/i', $_POST['faculty_mailid'])) {
-				$errors[] = 'You can sign up only with a gmail id';
-			} */
 			if(filter_var($_POST['u_mailid'], FILTER_VALIDATE_EMAIL) === false ) {
 				$errors[] = 'Not a valid email address!';
 			}

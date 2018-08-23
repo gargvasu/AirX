@@ -27,7 +27,7 @@
                 </div>
            
                 <div class="col-lg-4">
-                <label for="select" class="control-label">Number of Adults</label>
+                <label for="select" class="control-label">Number of Passengers</label>
                   <input type="number" class="form-control" name="count_a"  value="1" min="1">
                 </div>
                 <div class="col-lg-4">
@@ -62,11 +62,10 @@
 			  $cityto = explode(" ", $_GET['to_city']);
               $departdate = $_GET['departure_date'];
               $class = $_GET['class'];
-              // $path = $_GET['path'];
-              $counta = $_GET['count_a'];
-            //  $countc = $_GET['count_c'];
 
-            //  if($path==='oneway') {
+              $counta = $_GET['count_a'];
+
+
               echo '<center><legend> '.$class.' flights from '.$cityfrom[0].' ( '.$cityfrom[1].' ) to '.$cityto[0].' ( '.$cityto[1].' ) on '.$departdate.' </legend></center>';
               $query = "SELECT * FROM `flight_search` WHERE `from_city`= '$cityfrom[0]' AND `to_city` = '$cityto[0]' AND `departure_date` = '$departdate'";
               $result = mysql_query($query);
@@ -95,9 +94,9 @@
               while($row = mysql_fetch_assoc($result)) {
                 
 					if((($class==='Economy') && $row['e_seats_left']<$counta) ||$row['booked_status']==1 ){
-						//echo 'Not enough  economy seats left, please search again!';
+
 					}else if((($class==='Business') && $row['b_seats_left']<$counta)||$row['booked_status']==1 ){
-						//echo 'Not enough business seats left, please search again!';
+
 					}else{
 						$counter=$counter+1;
 				 if($class==='Economy') {  ?>
