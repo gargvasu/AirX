@@ -1,7 +1,7 @@
 # AirX
 AirX is an Online Flight Booking System for One - Way tickets developed as an assignment by One Direct Hiring. You can search for non stop or one stop flights between 11 cities, book flights, cancel booked flights, add payment details for future use.<BR />
-Airports <BR />
 
+Airports <BR />
 1. Chennai MAA <BR />
 2. Delhi DEL <BR />
 3. Kolkata CCU <BR />
@@ -13,6 +13,10 @@ Airports <BR />
 9. Goa GOI <BR />
 10. Amritsar ATQ <BR />
 11. Chandigarh IXC <BR />
+
+Airlines <BR />
+1. Indigo <BR />
+2. Air India <BR />
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
