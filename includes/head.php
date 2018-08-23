@@ -9,6 +9,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <meta name="description" content="AirX is Flight Booking System">
+  <meta name="keywords" content="Flight,Air Ticket,AirX,Booking,Online">
+  <meta name="author" content="Vasu Garg">
     <link rel="stylesheet" href="./vendor/css/bootstrap.min.css" media="screen">
     <link rel="stylesheet" href="./vendor/css/bootswatch.min.css">
 
@@ -20,11 +23,13 @@
 
     <script type="text/javascript">
                	$(document).ready(function(){
+					
                	     $("#departure_date").datepicker({
           					     maxDate: 30,
           					     minDate: 0,
           					     dateFormat:"dd-mm-yy"
           					  });
+							  $("#departure_date").datepicker().datepicker("setDate", new Date());
                       $("#return_date").datepicker({
           					     maxDate: 30,
           					     minDate: 1,
@@ -42,21 +47,24 @@
 				   }
 				}
           $(function() {
-            var availableTags = [
-            "Chennai MAA","Delhi DEL","Kolkata CCU","Mumbai BOM"
+            var airports = [
+            "Chennai MAA","Delhi DEL","Kolkata CCU","Mumbai BOM","Bengaluru BLR","Hyderabad HYD","Kochi COK","Pune PNQ","Goa GOI","Amritsar ATQ","Chandigarh IXC"
             ];
             $( "#from_city" ).autocomplete({
-            source: availableTags
+            source: airports
             });
           });
           $(function() {
-            var availableTags = [
-            "Chennai MAA","Delhi DEL","Kolkata CCU","Mumbai BOM"
+            var airports = [
+            "Chennai MAA","Delhi DEL","Kolkata CCU","Mumbai BOM","Bengaluru BLR","Hyderabad HYD","Kochi COK","Pune PNQ","Goa GOI","Amritsar ATQ","Chandigarh IXC"
             ];
+			
             $( "#to_city" ).autocomplete({
-            source: availableTags
+            source: airports
             });
+					
           });
+	
        </script>
        
 </head>

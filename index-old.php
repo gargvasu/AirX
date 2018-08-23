@@ -5,32 +5,68 @@
 ?>
 
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-4">
           <div class="well bs-component">
             <form class="form-horizontal" action="" method="GET">
-              <center><legend>Search Flights</legend></center>
+              <legend>Search Flights</legend>
               <div class="form-group">
-                <div class="col-lg-6">
+                <!--<div class="col-lg-10">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="path" value="oneway" onclick="setReadOnly(this)">
+                      One Way
+                    </label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label>
+                      <input type="radio" name="path" value="return" checked onclick="setReadOnly(this)">
+                      Return
+                    </label>
+                  </div>
+                </div>
+              </div>-->
+              <div class="form-group">
+                <div class="col-lg-12">
                   <label class="control-label" for="focusedInput">From</label>
                   <input class="form-control" name="from_city" id="from_city" value="<?php if(isset($_GET['from_city'])) { echo htmlentities ($_GET['from_city']); } else echo '';?>" required type="text">
                 </div>
-
-                <div class="col-lg-6">
+              </div>
+              <div class="form-group">
+                <div class="col-lg-12">
                   <label class="control-label" for="focusedInput">To</label>
-                  <input class="form-control" name="to_city" id="to_city" value="<?php if(isset($_GET['to_city']) ) { echo htmlentities ($_GET['to_city']); } else echo '';?>" required type="text" onchange="samecheck()">
+                  <input class="form-control" name="to_city" id="to_city" value="<?php if(isset($_GET['to_city'])) { echo htmlentities ($_GET['to_city']); } else echo '';?>" required type="text">
                 </div>
               </div>
               <div class="form-group">
-                <div class="col-lg-4">
+                <div class="col-lg-12">
                   <label class="control-label" for="focusedInput">Departure Date</label>
                   <input class="form-control" name="departure_date" id="departure_date" value="<?php if(isset($_GET['departure_date'])) { echo htmlentities ($_GET['departure_date']); } else echo '';?>" required type="text">
                 </div>
-           
-                <div class="col-lg-4">
+              </div><!--
+              <div class="form-group">
+                <div class="col-lg-12">
+                  <label class="control-label" for="focusedInput">Arrival Date</label>
+                  <input class="form-control" name="return_date" id="return_date" value="?php if(isset($_GET['return_date'])) { echo htmlentities ($_GET['return_date']); } else echo '';?>" required type="text">
+                </div>
+              </div>-->
+              <div class="form-group">
+                <div class="col-lg-12">
                 <label for="select" class="control-label">Number of Adults</label>
                   <input type="number" class="form-control" name="count_a"  value="1" min="1">
+                    <!--<option value="1">1</option>
+                  </select>-->
                 </div>
-                <div class="col-lg-4">
+              </div><!--
+              <div class="form-group">
+                <div class="col-lg-12">
+                <label for="select" class="control-label">Number of Children</label>
+                  <select class="form-control" name="count_c" id="select">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                  </select>
+                </div>
+              </div>-->
+              <div class="form-group">
+                <div class="col-lg-12">
                   <label for="select" class="control-label">Class</label>
                   <select class="form-control" name="class" id="select">
                     <option name="economy" value="Economy">Economy</option>
@@ -46,8 +82,8 @@
           </div>
         </div>
 		</div>
-		<div class="row">
-        <div class="col-lg-12">
+
+        <div class="col-lg-8">
           <div class="well bs-component">
             <form class="form-horizontal" action="book.php" method="GET">
             <?php 
@@ -67,7 +103,7 @@
             //  $countc = $_GET['count_c'];
 
             //  if($path==='oneway') {
-              echo '<center><legend> '.$class.' flights from '.$cityfrom[0].' ( '.$cityfrom[1].' ) to '.$cityto[0].' ( '.$cityto[1].' ) on '.$departdate.' </legend></center>';
+              echo '<legend> '.$class.' flights from '.$cityfrom[0].' ( '.$cityfrom[1].' ) to '.$cityto[0].' ( '.$cityto[1].' ) on '.$departdate.' </legend>';
               $query = "SELECT * FROM `flight_search` WHERE `from_city`= '$cityfrom[0]' AND `to_city` = '$cityto[0]' AND `departure_date` = '$departdate'";
               $result = mysql_query($query);
 			  $counter=0;
@@ -82,10 +118,8 @@
                   <thead>
                   <tr>
                     <th>Flight No</th>
-					<th> Flight Name</th>
                     <th>Departure Time</th>
                     <th>Arrival Time</th>
-					<th>Stops</th>
                     <th>Seats Left</th>
                     <th>Price</th>
                   </tr>
@@ -101,12 +135,9 @@
 					}else{
 						$counter=$counter+1;
 				 if($class==='Economy') {  ?>
-                   <tr><td><input type="radio" name="chose_to" value="<?php echo $row['fno']; ?>"/><?php echo " ".$row['fno']; ?></td>
-                   <td><img src='vendor\img\<?php echo $row['fname']; ?>.jpg' height='75px' >
-				   <?php echo $row['fname']; ?></td>
-				   <td><?php echo $row['departure_time']; ?></td>
+                   <tr><td><input type="radio" name="chose_to" value="<?php echo $row['fno']; ?>"/><?php echo $row['fno']; ?></td>
+                   <td><?php echo $row['departure_time']; ?></td>
                    <td><?php echo $row['arrival_time']; ?></td>
-				   <td><?php  if($row['f_stops']==0) {echo "Non Stop";}else{ echo "One Stop";} ?></td>
                    <td><?php echo $row['e_seats_left']; ?></td>
                    <td><?php echo $row['e_price']; ?></td></tr>
                    <?php } 
@@ -145,13 +176,5 @@ if($counter===0){
         </div>
       </div>
     <?php } ?>
-<script>
-function samecheck() {
-    to = document.forms[0].from_city.value;
-	fro =document.forms[0].to_city.value;
-	if(to==fro){
-		document.forms[0].to_city.value="";
-		alert("Destination cannot be same as Origin");
-}}
-</script>
+    
 <?php include $_SERVER["DOCUMENT_ROOT"].'AirX/includes/overall/footer.php'; ?>
