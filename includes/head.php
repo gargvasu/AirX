@@ -14,6 +14,17 @@
   <meta name="author" content="Vasu Garg">
     <link rel="stylesheet" href="./vendor/css/bootstrap.min.css" media="screen">
     <link rel="stylesheet" href="./vendor/css/bootswatch.min.css">
+	
+	
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118294394-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-118294394-1');
+</script>
 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
