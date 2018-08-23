@@ -41,6 +41,10 @@ A step by step series of examples that tell you how to get the site running on y
 3. Go to localhost/AirX/
 ```
 
+### Screenshots
+
+![image](https://gargvasu.in/AirX_images/1.png)
+
 ## Live Demo
 
  [AirX](https://www.gargvasu.in/AirX)
